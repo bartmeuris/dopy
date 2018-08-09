@@ -11,6 +11,11 @@ from six import wraps
 
 API_ENDPOINT = 'https://api.digitalocean.com'
 
+try:
+    basestring
+except NameError:
+    basestring = str
+
 class DoError(RuntimeError):
     pass
 
